@@ -1,0 +1,17 @@
+<h3>Add pending item</h3>
+
+<div class="container my-3">
+    <form (ngSubmit)="OnSubmit()">
+    <div class="form-group">
+      <label for="title" >Title</label>
+      <input type="text" [(ngModel)]="title" class="form-control" name="title" id="title" aria-describedby="emailHelp">
+    </div>
+    <div class="form-group">
+      <label for="desc">Description</label>
+      <input type="text" class="form-control" [(ngModel)]="desc" name="desc" id="desc" >
+      <!--error here because i havent made the variable and declared them yet-->
+    </div>
+    
+    <button type="submit" class="btn btn-sm btn-primary">Submit</button>
+  </form>
+  </div>

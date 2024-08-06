@@ -1,0 +1,11 @@
+ <!--here i want to show all the todos on screen and for that im using the ngfor directive which acts as a for loop and a custom html tag in angular-->
+<!--event listening for the addTodo event which will add the todo items-->
+ <app-add-todo (todoAdd)="addTodo($event)" ></app-add-todo>
+<h4>Your todo items!</h4>
+<div *ngIf="this.todos.length===0; else elseBlock">No Todo items to display here!</div>
+<ng-template #elseBlock>
+ <div *ngFor="let todo of todos">
+    <!--we have made our very own event named DeleteTodo and well provide its functionality-->
+    <app-todo-items [todo]="todo" (todoDelete)="deleteTodo($event)" (todoCheckbox)="ToggleTodo($event)"></app-todo-items>
+</div>
+</ng-template>

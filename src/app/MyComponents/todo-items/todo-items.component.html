@@ -1,0 +1,11 @@
+<div class="container my-3">
+
+<h5 [ngClass]="{'strike' : !todo.active}">{{todo.title}}</h5>
+<p>{{todo.desc}}</p>
+<!--below im using bootstrap classes for effective styling-->
+<div class="form-group form-check">
+    <input type="checkbox" class="form-check-input" id="exampleCheck1" (click)="OnCheckboxClick(todo)">
+    <label class="form-check-label" for="exampleCheck1">Mark as Done!!</label>
+  </div>
+<button class="btn btn-sm btn-danger" (click)="OnClick(todo)">Delete</button>
+</div>
